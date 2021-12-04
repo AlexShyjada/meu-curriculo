@@ -1,0 +1,9 @@
+.TopicoExperiencia{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--dark-80);
+  .date{
+    opacity: 0.5;
+  }  
+}

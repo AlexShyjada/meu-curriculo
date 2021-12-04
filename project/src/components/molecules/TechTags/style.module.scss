@@ -1,0 +1,13 @@
+.tag{
+  background: linear-gradient(87.7deg, #4070F4 0%, #2BD67B 99.89%);
+  border-radius: 2rem;
+  a{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    color: var(--white-100);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}

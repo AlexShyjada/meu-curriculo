@@ -1,0 +1,14 @@
+.tecnologias{
+  padding: 2.5rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  border-radius: 1rem;
+  background-color: var(--white-100);
+  div{
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
