@@ -7,7 +7,7 @@ export function Tecnologias() {
   return (
     <section className={style.tecnologias}>
       <H2>
-        Tecnologias
+        Minhas Tecnologias
       </H2>
       <div>
         <TechTags href="https://www.figma.com/">

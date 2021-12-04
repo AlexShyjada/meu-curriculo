@@ -1,6 +1,6 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
-import  {InformacoesGerais, Tecnologias, Experiencias} from '../components/organisms'
+import  {InformacoesGerais, Tecnologias, Experiencias, Educacao} from '../components/organisms'
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +12,7 @@ const Home: NextPage = () => {
       <InformacoesGerais/>
       <Tecnologias/>
       <Experiencias/>
+      <Educacao/>
     </>
   )
 }
