@@ -1,6 +1,6 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
-import  {InformacoesGerais, Tecnologias, Experiencias} from '../components/organisms'
+import {PersonalInformation} from "../components/layout"
 
 const Home: NextPage = () => {
   return (
@@ -9,9 +9,7 @@ const Home: NextPage = () => {
         <title>AlexShyjada | Currículo</title>
       </Head>
 
-      <InformacoesGerais/>
-      <Tecnologias/>
-      <Experiencias/>
+      <PersonalInformation/>
     </>
   )
 }
