@@ -1,0 +1,11 @@
+.mainInformation{
+  margin: 8rem auto;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  .projectsLists{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}

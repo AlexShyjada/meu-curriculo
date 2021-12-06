@@ -1,5 +1,5 @@
 import style from "./style.module.scss"
-import  {Profile, InformacoesGerais, Tecnologias, Experiencias} from '../../organisms'
+import  {Profile, InformacoesGerais, Tecnologias, Experiencias, Educacao} from '../../organisms'
 
 export function PersonalInformation() {
   return (
@@ -8,6 +8,7 @@ export function PersonalInformation() {
       <InformacoesGerais/>
       <Tecnologias/>
       <Experiencias/>
+      <Educacao/>
     </section>
   )
 }

@@ -1,6 +1,8 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
-import {PersonalInformation} from "../components/layout"
+import {PersonalInformation, DevProjects, Footer} from "../components/layout"
+import {StateAndRequestContextProvider} from "../components/context/StateAndRequestContext"
+import home from "../styles/home.module.scss"
 
 const Home: NextPage = () => {
   return (
@@ -9,7 +11,15 @@ const Home: NextPage = () => {
         <title>AlexShyjada | Currículo</title>
       </Head>
 
-      <PersonalInformation/>
+      <StateAndRequestContextProvider>
+        <main className={`${home.mainInformation} container`}>
+          <PersonalInformation/>
+          <section className={home.projectsLists}>
+            <DevProjects/>
+          </section>
+        </main>
+        <Footer/>
+      </StateAndRequestContextProvider>
     </>
   )
 }

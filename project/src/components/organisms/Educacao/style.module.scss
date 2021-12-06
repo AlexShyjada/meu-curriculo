@@ -1,0 +1,14 @@
+.educacao{
+  border-radius: 1rem;
+  height: max-content;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background: var(--white-100);
+  .educacaoList{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
