@@ -7,20 +7,15 @@ export const api = axios.create({
 
 createServer({
   models: {
-    profileInfo: Model,
     generalInformation: Model,
     technologys: Model,
     professionalExperiences: Model,
-    education: Model,
+    academicEducation: Model,
   },
+
   seeds(server){
     server.db.loadData({
-      profileInfo: {
-        name: "Alexandre Shyjada",
-        position: "Front-end Developer & UI/UX Designer",
-        link: ""
-      },
-      generalInformation: [
+      generalInformation:[
         {
           id: 1,
           link: "https://www.google.com.br/maps/@-13.0096854,-38.5320143,3a,75y,234.74h,80.7t/data=!3m6!1e1!3m4!1sqAU7Yg8JMaZxMXge5vTafA!2e0!7i13312!8i6656",
@@ -125,7 +120,7 @@ createServer({
           link: "https://www.markdownguide.org/basic-syntax/",
         },
       ],
-      professionalExperiences: [
+      professionalExperiences:[
         {
           id: 1,
           title: "Info Jr UFBA",
@@ -145,7 +140,7 @@ createServer({
           position: "Estagiário em Front-end Next.js",
         },
       ],
-      education: [
+      academicEducation:[
         {
           id: 1,
           school: "Microlins Salvador",
@@ -155,30 +150,27 @@ createServer({
         {
           id: 2,
           school: "Microlins Salvador",
-          date: "2016 - 2018",
+          date: "2016 - 2017",
           course: "Web design",
         },
         {
           id: 3,
           school: "Universidade Federal da Bahia",
-          date: "2020 - até o momento",
-          course: "Web design",
+          date: "2020 - Até o momento",
+          course: "Bacharelado em Sistemas de Informação",
         },
         {
           id: 4,
           school: "Rocketseat",
-          date: "2021 - até o momento",
-          course: "Desenvolvimento web Fullstack",
+          date: "2021 - Até o momento",
+          course: "Desenvolvimento Web Fullstack",
         },
-      ],
+      ]
     })
   },
+
   routes(){
-    this.namespace = 'api'
-    
-    this.get("/profileInfo", () => {
-      return this.schema.all("profileInfo")
-    })
+    this.namespace = '/api'
 
     this.get("/generalInformation", () => {
       return this.schema.all("generalInformation")
@@ -192,8 +184,8 @@ createServer({
       return this.schema.all("professionalExperiences")
     })
 
-    this.get("/education", () => {
-      return this.schema.all("education")
+    this.get("/academicEducation", () => {
+      return this.schema.all("academicEducation")
     })
   }
 })
