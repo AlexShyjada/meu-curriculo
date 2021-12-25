@@ -1,14 +1,15 @@
 .educacao{
-  border-radius: 1rem;
-  height: max-content;
   padding: 2.5rem;
+  height: max-content;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  background: var(--white-100);
-  .educacaoList{
+  border-radius: 1rem;
+  background-color: var(--white-100);
+  .educacaoInfo{
+    gap: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    flex-wrap: wrap;
   }
 }
