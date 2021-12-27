@@ -1,0 +1,32 @@
+.divDegrade {
+  border-top: 8.7rem solid var(--white-60);
+  height: calc(25rem + 8.7rem);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(87.7deg, #4070f4 0%, #2bd67b 99.89%);
+}
+.divDegrade.dark {
+  border-top: 8.7rem solid var(--dark-100);
+}
+
+.mainInformation {
+  padding: 4rem 0;
+  background-color: var(--white-60);
+  width: 100%;
+  .container{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    .projectsLists {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+  }
+}
+
+.dark{
+  background-color: var(--dark-100);
+}

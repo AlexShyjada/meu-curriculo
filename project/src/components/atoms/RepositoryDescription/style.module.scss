@@ -11,4 +11,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
+  color: var(--dark-80);
+}
+.repositoryDescription.dark {
+  color: var(--white-80);
 }

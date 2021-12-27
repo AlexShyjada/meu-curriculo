@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+import { ReactNode, useContext } from "react";
+import { StateAndRequestContext } from "../../context/StateAndRequestContext";
 import style from "./style.module.scss";
 
 interface iRepositoryDescriptionProps {
@@ -8,5 +9,7 @@ interface iRepositoryDescriptionProps {
 export function RepositoryDescription(props: iRepositoryDescriptionProps) {
   const { children } = props;
 
-  return <span className={style.repositoryDescription}>{children}</span>;
+  const { darkMode } = useContext(StateAndRequestContext);
+
+  return <span className={`${style.repositoryDescription} ${darkMode ? style.dark : ""}`}>{children}</span>;
 }

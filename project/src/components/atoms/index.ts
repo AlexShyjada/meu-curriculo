@@ -8,3 +8,5 @@ export * from "./SpanText/index";
 export * from "./ButtonDegrade/index";
 export * from "./Link/index";
 export * from "./RepositoryDescription/index";
+export * from "./LogoAlexShyjadaLight/index";
+export * from "./LogoAlexShyjadaDark/index";

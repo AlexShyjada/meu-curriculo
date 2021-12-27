@@ -9,4 +9,16 @@
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+  color: var(--dark-80);
+  transition: 0.3s;
+  &:hover{
+    color: (--green);
+  }
+}
+.dark{
+  color: var(--white-80);
+  transition: 0.3s;
+  &:hover{
+    color: var(--green)
+  }
 }

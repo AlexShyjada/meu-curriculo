@@ -4,6 +4,15 @@
   gap: 0.5rem;
   color: var(--dark-80);
   .date{
+    color: var(--dark-80);
+    opacity: 0.5;
+  }  
+}
+
+.dark{
+  color: var(--white-80);
+  .date{
+    color: var(--white-80);
     opacity: 0.5;
   }  
 }
