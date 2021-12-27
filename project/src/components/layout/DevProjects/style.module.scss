@@ -1,0 +1,12 @@
+.myDevProjects{
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width:100%;
+
+  .repositorys{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:2.5rem;
+  }
+}

@@ -1,0 +1,129 @@
+.header {
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100%;
+  border-bottom: solid 2px #e7e7e7;
+  background-color: #ededed77;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  z-index: 100;
+  .headerContainer {
+    margin: 0 auto;
+    width: 123.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      a {
+        font-size: 1.6rem;
+        font-style: normal;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+        transition: 0.3s;
+        &:hover {
+          color: var(--green);
+        }
+      }
+    }
+  }
+}
+
+.clToggleSwitch {
+  position: relative;
+}
+
+.clSwitch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--green);
+  }
+}
+
+.clSwitch > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: -1;
+  position: absolute;
+  right: 6px;
+  top: -8px;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 0, 0, 0.38);
+  outline: none;
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+  transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
+}
+/* Track */
+.clSwitch > span::before {
+  content: "";
+  float: right;
+  display: inline-block;
+  margin: 5px 0 5px 10px;
+  border-radius: 7px;
+  width: 36px;
+  height: 14px;
+  background-color: rgb(0, 0, 0, 0.1);
+  vertical-align: top;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+/* Thumb */
+.clSwitch > span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 16px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--dark-80);
+  transition: background-color 0.2s, transform 0.2s;
+}
+/* Checked */
+.clSwitch > input:checked {
+  right: -10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.clSwitch > input:checked + span::before {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.clSwitch > input:checked + span::after {
+  background-color: rgba(255, 255, 255);
+  transform: translateX(16px);
+}
+/* Hover, Focus */
+
+.clSwitch > input:checked:active + span::before {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* Disabled */
+.clSwitch > input:disabled {
+  opacity: 0;
+}
+
+.clSwitch > input:checked:disabled + span::before {
+  background-color: #bfdbda;
+}
+
+.clSwitch > input:checked:disabled + span::after {
+  background-color: #61b5b4;
+}

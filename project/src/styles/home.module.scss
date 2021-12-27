@@ -1,0 +1,21 @@
+.divDegrade {
+  margin-top: 8.7rem;
+  height: 25rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(87.7deg, #4070f4 0%, #2bd67b 99.89%);
+}
+
+.mainInformation {
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  .projectsLists {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}

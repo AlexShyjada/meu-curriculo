@@ -1,0 +1,14 @@
+.buttonDegrade{
+  width: max-content;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  color: var(--white-100);
+  font-size: 1.4rem;
+  background: var(--degrade);
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover{
+    filter: brightness(0.9);
+  }
+}

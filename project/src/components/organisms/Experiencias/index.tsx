@@ -1,6 +1,7 @@
 import { H2 } from "../../atoms";
 import { TopicoExperiencia } from "../../molecules";
 import style from "./style.module.scss";
+import { content } from "./content";
 
 export function Experiencias() {
   return (
@@ -8,26 +9,16 @@ export function Experiencias() {
       <H2>Experiências</H2>
       <div>
         <ul>
-          <TopicoExperiencia
-            title={"Info Jr UFBA"}
-            date={"2020 - 2022"}
-            position={"Diretor Comercial"}
-          />
-          <TopicoExperiencia
-            title={"Info Jr UFBA"}
-            date={"2020 - 2022"}
-            position={"Diretor Comercial"}
-          />
-          <TopicoExperiencia
-            title={"Info Jr UFBA"}
-            date={"2020 - 2022"}
-            position={"Diretor Comercial"}
-          />
-          <TopicoExperiencia
-            title={"Info Jr UFBA"}
-            date={"2020 - 2022"}
-            position={"Diretor Comercial"}
-          />
+          {content.map((experienceItem) => {
+            return (
+              <TopicoExperiencia
+                key={experienceItem.id}
+                title={experienceItem.title}
+                date={experienceItem.date}
+                position={experienceItem.position}
+              />
+            );
+          })}
         </ul>
       </div>
     </section>

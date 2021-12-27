@@ -1,0 +1,14 @@
+.projectRepository{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: var(--white-100);
+
+  .techAndCommits{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
