@@ -83,14 +83,21 @@ export function Header() {
         </a>
 
         <nav>
-          <a href="">Início</a>
-          <a href="">Sobre mim</a>
-          <a href="">Prtifólio</a>
-          <a href="">Contato</a>
-          <a href="">Dark mode</a>
+          <a href="https://www.alexshyjada.com/" target="_blank" rel="noreferrer">Início</a>
+          <a href="https://www.alexshyjada.com/#sobre-mim" target="_blank" rel="noreferrer">Sobre mim</a>
+          <a href="https://www.alexshyjada.com/#my-portifolio" target="_blank" rel="noreferrer">Portifólio</a>
+          <div className={style.clToggleSwitch}>
+            <label className={style.clSwitch}>
+              Darkmode
+              <input type="checkbox" />
+              <span></span>
+            </label>
+          </div>
         </nav>
 
-        <ButtonDegrade>Entrar em contato</ButtonDegrade>
+        <a href="https://www.alexshyjada.com/#contact" target="_blank" rel="noreferrer">
+          <ButtonDegrade>Entrar em contato</ButtonDegrade>
+        </a>
       </div>
     </header>
   );

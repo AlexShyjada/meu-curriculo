@@ -1,14 +1,26 @@
-import {RepositoryName, Commits} from "../../molecules"
-import {SpanText} from "../../atoms"
-import style from "./style.module.scss"
+import { RepositoryName, Commits } from "../../molecules";
+import { RepositoryDescription } from "../../atoms";
+import style from "./style.module.scss";
 
+interface iProjectRepository {
+  href: string;
+  repositoryName: string;
+  repositoryDescription: string;
+  tech: string;
+}
 
-export function ProjectRepository() {
+export function ProjectRepository(props: iProjectRepository) {
+  const { href, repositoryName, repositoryDescription, tech } = props;
+
   return (
-    <div className={style.projectRepository}>
-      <RepositoryName/>
-      <SpanText>Consulte os códigos de erro que aparecem no painel do veículo Onix.</SpanText>
-      <Commits/>
-    </div>
-  )
+    <a href={href}>
+      <div className={style.projectRepository}>
+        <RepositoryName repositoryName={repositoryName} />
+        <RepositoryDescription>{repositoryDescription}</RepositoryDescription>
+        <div className={style.techAndCommits}>
+          <Commits commits={tech} />
+        </div>
+      </div>
+    </a>
+  );
 }

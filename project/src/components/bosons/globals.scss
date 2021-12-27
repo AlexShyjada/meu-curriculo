@@ -1,10 +1,12 @@
 :root {
+  --green: #2BD67B;
+  --blue: ##4070F4;
   --dark-100: #040413;
   --dark-80: #090918;
   --white-100: #FFF;
   --white-80: #FAFAFA;
   --white-60: #EDEDED;
-  --degrade: linear-gradient(87.7deg, #4070F4 0%, #2BD67B 99.89%);
+  --degrade: linear-gradient(87.7deg, #2BD67B 0%, #4070F4 99.89%);
 }
 
 * {

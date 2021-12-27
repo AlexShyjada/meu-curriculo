@@ -4,17 +4,10 @@ import {
   ReactNode,
   SetStateAction,
   useState,
+  useEffect,
 } from "react";
 
-interface iContextProviderProps {
-  darkMode: boolean;
-  setDarkMode: Dispatch<SetStateAction<boolean>>;
-  children: ReactNode;
-}
-interface iStateAndRequestContext {
-  darkMode: boolean
-  setDarkMode: Dispatch<SetStateAction<boolean>>;
-}
+import { iContextProviderProps, iStateAndRequestContext, RootObject } from "./StateAndRequestContentInterfaces"
 
 export const StateAndRequestContext = createContext(
   {} as iStateAndRequestContext
@@ -23,8 +16,18 @@ export const StateAndRequestContext = createContext(
 export function StateAndRequestContextProvider(props: iContextProviderProps) {
   const { children, darkMode, setDarkMode } = props;
 
+  const [githubRepositorys, setGithubRepositorys] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/AlexShyjada/repos")
+    .then((response) => response.json())
+    .then(data => setGithubRepositorys(data))
+  }, []);
+
+  console.log(githubRepositorys)
+
   return (
-    <StateAndRequestContext.Provider value={{ darkMode, setDarkMode }}>
+    <StateAndRequestContext.Provider value={{ darkMode, setDarkMode, githubRepositorys }}>
       {children}
     </StateAndRequestContext.Provider>
   );

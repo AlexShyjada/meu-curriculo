@@ -11,6 +11,6 @@ export function Link(props: iLinkProps) {
   const { href, children } = props
 
   return (
-    <a className={style.link} href={href}>{children}</a>
+    <a className={style.link} target="_blank" href={href} rel="noreferrer">{children}</a>
   )
 }
