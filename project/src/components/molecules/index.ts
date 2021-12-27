@@ -5,3 +5,4 @@ export * from "./TopicosEducacao/index";
 export * from "./ProfileContent/index";
 export * from "./RepositoryName/index";
 export * from "./Commits/index";
+
